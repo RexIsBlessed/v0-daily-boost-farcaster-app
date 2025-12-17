@@ -1,0 +1,18 @@
+{
+  "accountAssociation": {
+    "header": "eyJmaWQiOjEsInR5cGUiOiJjdXN0b2R5Iiwia2V5IjoiMHhkQzVENTU5NTYxNzgzOTI3NjMyNjYyOTI5MzM2MzU1NTEzRjM3NzREIn0",
+    "payload": "eyJkb21haW4iOiJ5b3VyLWFwcC12ZXJjZWwuYXBwIn0",
+    "signature": "MHhhMGIxYzJkM2U0ZjVhNmI3YzhkOWVhZmJjZGVmMTIzNDU2Nzg5MGFiY2RlZjEyMzQ1Njc4OTBhYmNkZWYxMjM0NTY3ODkwYWJjZGVmMTIzNDU2Nzg5MGFiY2RlZjEyMzRiYzFi"
+  },
+  "frame": {
+    "version": "next",
+    "name": "Daily Boost",
+    "iconUrl": "https://your-vercel-url.vercel.app/icon.jpg",
+    "homeUrl": "https://your-vercel-url.vercel.app",
+    "imageUrl": "https://your-vercel-url.vercel.app/og-image.jpg",
+    "buttonTitle": "Open Daily Boost",
+    "splashImageUrl": "https://your-vercel-url.vercel.app/splash.jpg",
+    "splashBackgroundColor": "#0F172A",
+    "webhookUrl": "https://your-vercel-url.vercel.app/api/webhook"
+  }
+}
