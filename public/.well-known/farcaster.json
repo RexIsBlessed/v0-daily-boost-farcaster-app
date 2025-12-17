@@ -1,18 +1,18 @@
 {
   "accountAssociation": {
     "header": "eyJmaWQiOjEsInR5cGUiOiJjdXN0b2R5Iiwia2V5IjoiMHhkQzVENTU5NTYxNzgzOTI3NjMyNjYyOTI5MzM2MzU1NTEzRjM3NzREIn0",
-    "payload": "eyJkb21haW4iOiJ5b3VyLWFwcC12ZXJjZWwuYXBwIn0",
+    "payload": "eyJkb21haW4iOiJZT1VSX0FQUF9VUkwifQ",
     "signature": "MHhhMGIxYzJkM2U0ZjVhNmI3YzhkOWVhZmJjZGVmMTIzNDU2Nzg5MGFiY2RlZjEyMzQ1Njc4OTBhYmNkZWYxMjM0NTY3ODkwYWJjZGVmMTIzNDU2Nzg5MGFiY2RlZjEyMzRiYzFi"
   },
-  "frame": {
-    "version": "next",
+  "miniapp": {
+    "version": "1",
     "name": "Daily Boost",
-    "iconUrl": "https://your-vercel-url.vercel.app/icon.jpg",
-    "homeUrl": "https://your-vercel-url.vercel.app",
-    "imageUrl": "https://your-vercel-url.vercel.app/og-image.jpg",
-    "buttonTitle": "Open Daily Boost",
-    "splashImageUrl": "https://your-vercel-url.vercel.app/splash.jpg",
-    "splashBackgroundColor": "#0F172A",
-    "webhookUrl": "https://your-vercel-url.vercel.app/api/webhook"
+    "description": "Complete daily actions on Base, Celo, and Degen networks to build your on-chain streak and earn rewards",
+    "iconUrl": "https://YOUR_APP_URL/icon.jpg",
+    "homeUrl": "https://YOUR_APP_URL",
+    "canonicalDomain": "YOUR_APP_URL",
+    "requiredChains": ["eip155:8453", "eip155:42220", "eip155:666666666"],
+    "tags": ["daily", "streak", "rewards", "base", "celo", "degen"],
+    "requiredCapabilities": ["actions.ready", "actions.signIn", "wallet.send"]
   }
 }
