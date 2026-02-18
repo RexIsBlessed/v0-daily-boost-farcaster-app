@@ -1,0 +1,18 @@
+{
+  "accountAssociation": {
+    "header": "eyJmaWQiOjEsInR5cGUiOiJjdXN0b2R5Iiwia2V5IjoiMHhkQzVENTU5NTYxNzgzOTI3NjMyNjYyOTI5MzM2MzU1NTEzRjM3NzREIn0",
+    "payload": "eyJkb21haW4iOiJ2MC1kYWlseS1ib29zdC1mYXJjYXN0ZXItYXBwLXJleGlzYmxlc3NlZHMtcHJvamVjdHMudmVyY2VsLmFwcCJ9",
+    "signature": "MHhhMGIxYzJkM2U0ZjVhNmI3YzhkOWVhZmJjZGVmMTIzNDU2Nzg5MGFiY2RlZjEyMzQ1Njc4OTBhYmNkZWYxMjM0NTY3ODkwYWJjZGVmMTIzNDU2Nzg5MGFiY2RlZjEyMzRiYzFi"
+  },
+  "miniapp": {
+    "version": "1",
+    "name": "Daily Boost",
+    "description": "Complete daily actions on Base, Celo, and Degen networks to build your on-chain streak and earn rewards",
+    "iconUrl": "https://v0-daily-boost-farcaster-app-rexisblesseds-projects.vercel.app/icon.jpg",
+    "homeUrl": "https://v0-daily-boost-farcaster-app-rexisblesseds-projects.vercel.app",
+    "canonicalDomain": "v0-daily-boost-farcaster-app-rexisblesseds-projects.vercel.app",
+    "requiredChains": ["eip155:8453", "eip155:42220", "eip155:666666666"],
+    "tags": ["daily", "streak", "rewards", "base", "celo", "degen"],
+    "requiredCapabilities": ["actions.ready", "actions.signIn", "wallet.send"]
+  }
+}
