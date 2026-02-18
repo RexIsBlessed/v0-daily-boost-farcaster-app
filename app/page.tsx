@@ -1,8 +1,6 @@
 "use client"
 
 import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
 import { Sun, Calendar, Trophy, Check, Loader2 } from "lucide-react"
 
 type CardStatus = "idle" | "pending" | "success"
@@ -48,25 +46,24 @@ export default function DailyBoostApp() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 font-sans">
       {/* Navigation Bar */}
       <nav className="sticky top-0 z-50 backdrop-blur-xl bg-white/5 border-b border-white/10">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <h1 className="text-xl font-bold text-white tracking-tight">Daily Boost</h1>
-          <Button
+          <button
             onClick={() => setWalletConnected(!walletConnected)}
-            className="rounded-full bg-white/10 hover:bg-white/20 text-white border border-white/20 backdrop-blur-xl transition-all duration-300"
-            size="sm"
+            className="px-4 py-2 rounded-full bg-white/10 hover:bg-white/20 text-white border border-white/20 backdrop-blur-xl transition-all duration-300 text-sm font-medium"
           >
             {walletConnected ? "Connected" : "Connect Wallet"}
-          </Button>
+          </button>
         </div>
       </nav>
 
       {/* Main Content */}
       <main className="container mx-auto px-4 py-8 max-w-md">
         {/* Streak Card */}
-        <Card className="mb-8 bg-white/5 backdrop-blur-xl border-white/10 overflow-hidden">
+        <div className="mb-8 bg-white/5 backdrop-blur-xl border border-white/10 overflow-hidden rounded-xl">
           <div className="p-6">
             <div className="text-center">
               <p className="text-sm text-slate-400 mb-2 font-medium tracking-wide uppercase">Current Streak</p>
@@ -77,12 +74,12 @@ export default function DailyBoostApp() {
             </div>
           </div>
           <div className="h-1 bg-gradient-to-r from-orange-500 via-red-500 to-orange-500" />
-        </Card>
+        </div>
 
         {/* Action Cards */}
         <div className="space-y-4">
           {/* Daily GM - Base Network */}
-          <Card className="group bg-gradient-to-br from-blue-600/20 via-blue-500/20 to-cyan-500/20 backdrop-blur-xl border-white/20 overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-blue-500/20">
+          <div className="group bg-gradient-to-br from-blue-600/20 via-blue-500/20 to-cyan-500/20 backdrop-blur-xl border border-white/20 overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-blue-500/20 rounded-xl">
             <div className="p-6">
               <div className="flex items-start justify-between mb-4">
                 <div className="flex items-center gap-3">
@@ -101,18 +98,18 @@ export default function DailyBoostApp() {
               <p className="text-sm text-slate-300 mb-4 leading-relaxed">
                 {"Start your day right! Say GM and earn daily rewards on Base."}
               </p>
-              <Button
+              <button
                 onClick={() => handleCardClick("daily", setDailyGmStatus)}
                 disabled={dailyGmStatus !== "idle"}
-                className="w-full rounded-xl bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-semibold transition-all duration-300 shadow-lg hover:shadow-blue-500/50 disabled:opacity-70"
+                className="w-full rounded-xl bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-semibold transition-all duration-300 shadow-lg hover:shadow-blue-500/50 disabled:opacity-70 py-3 px-4 flex items-center justify-center"
               >
                 {getButtonContent(dailyGmStatus)}
-              </Button>
+              </button>
             </div>
-          </Card>
+          </div>
 
           {/* Weekly Check-in - Celo Network */}
-          <Card className="group bg-gradient-to-br from-green-600/20 via-emerald-500/20 to-teal-500/20 backdrop-blur-xl border-white/20 overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-green-500/20">
+          <div className="group bg-gradient-to-br from-green-600/20 via-emerald-500/20 to-teal-500/20 backdrop-blur-xl border border-white/20 overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-green-500/20 rounded-xl">
             <div className="p-6">
               <div className="flex items-start justify-between mb-4">
                 <div className="flex items-center gap-3">
@@ -131,18 +128,18 @@ export default function DailyBoostApp() {
               <p className="text-sm text-slate-300 mb-4 leading-relaxed">
                 {"Complete your weekly check-in and earn bonus rewards on Celo."}
               </p>
-              <Button
+              <button
                 onClick={() => handleCardClick("weekly", setWeeklyStatus)}
                 disabled={weeklyStatus !== "idle"}
-                className="w-full rounded-xl bg-gradient-to-r from-green-500 to-teal-500 hover:from-green-600 hover:to-teal-600 text-white font-semibold transition-all duration-300 shadow-lg hover:shadow-green-500/50 disabled:opacity-70"
+                className="w-full rounded-xl bg-gradient-to-r from-green-500 to-teal-500 hover:from-green-600 hover:to-teal-600 text-white font-semibold transition-all duration-300 shadow-lg hover:shadow-green-500/50 disabled:opacity-70 py-3 px-4 flex items-center justify-center"
               >
                 {getButtonContent(weeklyStatus)}
-              </Button>
+              </button>
             </div>
-          </Card>
+          </div>
 
           {/* Monthly Milestone - Degen Network */}
-          <Card className="group bg-gradient-to-br from-purple-600/20 via-violet-500/20 to-fuchsia-500/20 backdrop-blur-xl border-white/20 overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-purple-500/20">
+          <div className="group bg-gradient-to-br from-purple-600/20 via-violet-500/20 to-fuchsia-500/20 backdrop-blur-xl border border-white/20 overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl hover:shadow-purple-500/20 rounded-xl">
             <div className="p-6">
               <div className="flex items-start justify-between mb-4">
                 <div className="flex items-center gap-3">
@@ -161,15 +158,15 @@ export default function DailyBoostApp() {
               <p className="text-sm text-slate-300 mb-4 leading-relaxed">
                 {"Reach your monthly milestone and unlock exclusive rewards."}
               </p>
-              <Button
+              <button
                 onClick={() => handleCardClick("monthly", setMonthlyStatus)}
                 disabled={monthlyStatus !== "idle"}
-                className="w-full rounded-xl bg-gradient-to-r from-purple-500 to-fuchsia-500 hover:from-purple-600 hover:to-fuchsia-600 text-white font-semibold transition-all duration-300 shadow-lg hover:shadow-purple-500/50 disabled:opacity-70"
+                className="w-full rounded-xl bg-gradient-to-r from-purple-500 to-fuchsia-500 hover:from-purple-600 hover:to-fuchsia-600 text-white font-semibold transition-all duration-300 shadow-lg hover:shadow-purple-500/50 disabled:opacity-70 py-3 px-4 flex items-center justify-center"
               >
                 {getButtonContent(monthlyStatus)}
-              </Button>
+              </button>
             </div>
-          </Card>
+          </div>
         </div>
 
         {/* Footer Info */}
